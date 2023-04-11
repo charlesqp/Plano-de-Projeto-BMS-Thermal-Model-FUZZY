@@ -1,0 +1,66 @@
+\section{Plano de trabalho e cronograma}
+
+Este plano de mestrado está previsto para doze meses de duração,
+compreendendo as seguintes etapas:
+ 
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate} 
+    \item Obtenção dos créditos necessários
+    \item Revisão bibliográfica sobre sistemas de gerenciamento de baterias de Lítio, lógica fuzzy e modelos de predição de temperatura
+    \item Definição dos objetivos do trabalho e metodologia de pesquisa
+    \item Coleta de dados de temperatura de baterias de Lítio em veículos híbridos e elétricos
+    \item Desenvolvimento de preditores baseados em lógica fuzzy para modelagem de temperatura
+    \item Implementação dos modelos de aprendizado de máquina
+    \item Treinamento e ajuste dos modelos com os dados coletados
+    \item Análise dos resultados obtidos e comparação com outros métodos
+    \item Redação da dissertação
+    \item Revisões e correções na dissertação
+    \item Apresentação e defesa do trabalho de pesquisa
+\end{enumerate}
+ 
+ O cronograma apresenta, aproximadamente, a distribuição das etapas descritas ao longo dos meses.
+\definecolor{RoyalBlue}{rgb}{0.25, 0.41, 0.88}
+\definecolor{black}{rgb}{0.0, 0.0, 0.0}
+\definecolor{OliveGreen}{rgb}{0,0.6,0}
+\definecolor{Maroon}{rgb}{0.5, 0.0, 0.0}
+
+\def\mystartdate{2022-08}%starting date of the calendar
+\def\myenddate{2024-08}%ending date of the calendar
+
+\begin{ganttchart}[
+y unit title=0.4cm,
+y unit chart=0.5cm,
+vgrid,
+expand chart=\textwidth,
+time slot format=isodate-yearmonth,
+time slot unit=month,
+progress=today,
+title/.append style={draw=none, fill=RoyalBlue!50!black},
+title label font=\sffamily\bfseries\color{white},
+title label node/.append style={below=-1.6ex},
+title left shift=.05,
+title right shift=-.05,
+title height=1,
+bar/.append style={draw=none, fill=OliveGreen!75},
+bar height=.6,
+bar label font=\normalsize\color{black!50},
+group right shift=0,
+group top shift=.6,
+group height=.3,
+group peaks height=.2,
+bar incomplete/.append style={fill=Maroon},
+today={2023-04}
+]{\mystartdate}{\myenddate}
+    \gantttitlecalendar{year, month} \\
+    \ganttbar{a)}{2022-08-01}{2023-06-31} \\ %  Obtenção dos créditos necessários
+    \ganttbar{b)}{2023-05}{2023-05} \\ % {1} Revisão bibliográfica
+    \ganttbar{c)}{2023-06}{2023-06} \\ % {1} Definição dos objetivos e metodologia de pesquisa
+    \ganttbar{d)}{2023-07}{2023-07} \\ % {3} Coleta de dados de temperatura
+    \ganttbar{e)}{2023-08}{2023-09} \\ % {2} Desenvolvimento de preditores baseados em lógica fuzzy 
+    \ganttbar{f)}{2023-10}{2023-10} \\ % {1} Implementação dos modelos de aprendizado de máquina
+    \ganttbar{g)}{2023-11}{2023-12} \\ % {2} Treinamento e ajuste dos modelos com os dados coletados
+    \ganttbar{h)}{2024-01}{2024-01} \\ % {1} Análise dos resultados obtidos e comparação com outros métodos
+    \ganttbar{i)}{2024-02}{2024-05} \\ % {6} Redação da dissertação/tese
+    \ganttbar{i)}{2024-06}{2024-06} \\ % {6} Revisões e correções na dissertação/tese
+    \ganttbar{i)}{2024-07}{2024-07} \\ % {6} Apresentação e defesa do trabalho de pesquisa
+\end{ganttchart}

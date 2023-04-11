@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ae}
+\usepackage{indentfirst}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsthm,amssymb,amsfonts,amsmath}
+\usepackage{graphicx}
+\usepackage{psfrag}
+\usepackage{booktabs}
+%\usepackage[numbers]{natbib}
+\usepackage{enumitem}
+\usepackage{colortbl,booktabs}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{pgfgantt}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\usepackage{csquotes}
+\addbibresource{manualbib.bib} %Import the bibliography file
+\addbibresource{MDLreferences.bib} %Import the bibliography file
+
+\newlist{inparaenum}{enumerate}{2}% allow two levels of nesting in an enumerate-like environment
+\setlist[inparaenum]{nosep}% compact spacing for all nesting levels
+\setlist[inparaenum,1]{label=\bfseries\arabic*.}% labels for top level
+\setlist[inparaenum,2]{label=\arabic{inparaenumi}.\emph{\alph*})}% labels for second level
+
+\NewDocumentCommand{\tituloProjeto}{}{Projeto de observadores baseados em lógica fuzzy para estimação de temperatura em sistemas de gerenciamento de baterias de Lítio para utilização em veículos híbridos e elétricos}
+\NewDocumentCommand{\nomeAluno}{}{Charles Quirino Pimenta}
+\NewDocumentCommand{\nomeOrientador}{}{- A DEFINIR -}
+
+\begin{document}
+
+\input{00_capa}
+\input{01_introducao}
+\input{02_formulacao_do_problema}
+\input{03_revisao_bibliografica}    
+\input{04_metodologia}  
+\input{05_resultados_esperados}
+\input{06_plano_de_trabalho_cronograma}
+\input{07_orcamento}
+\input{08_consideracoes_finais}
+
+%\bibliographystyle{plainnat}
+\printbibliography %Prints bibliography
+\end{document}
